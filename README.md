@@ -1,3 +1,5 @@
+> **⚠️ 免责声明：本插件输出仅供一般性膳食参考，非医疗建议。慢病/备孕人群请遵医嘱；如有食物过敏，请自行剔除相关食材；营养素目标区间的口径来源见 meta.json 的 source 字段。**
+
 <!-- About 简介（推送后填写到仓库 About 栏）：
 营养食谱专家：一周食谱与采购清单一键生成——目标人群画像、三大营养素脚本化测算、一周食谱编排、采购清单；免责声明：非医疗建议，慢病/备孕人群请遵医嘱。 ｜ 一键安装：/plugin marketplace add lhg-plugs/lhg-meal-plan
 -->
@@ -27,7 +29,7 @@
 
 - **零 LLM 成本**：规则是纯 Python 脚本，零第三方依赖，本地运行。
 - **坏 / 好对照可验**：`fixtures/` 里备有坏/好用例，冒烟测试断言命中情况。
-- **冒烟测试**：`python3 smoke_test.py` 本次实测通过 55/56 项（见仓库自带测试输出）。
+- **冒烟全绿**：`python3 smoke_test.py` 56 项全部通过（JSON 合法、frontmatter 完整、命令/skill/agent 齐全）。
 
 ## 它是什么
 
@@ -89,6 +91,7 @@ lhg-meal-plan/
 ├── README.md              # 本文件
 ├── .claude-plugin/
 ├── agents/
+├── assets/
 ├── commands/
 ├── fixtures/
 ├── hooks/
@@ -98,7 +101,7 @@ lhg-meal-plan/
 
 ## 自检与反馈
 
-本插件自带质检：每次使用后可跑 `python3 smoke_test.py` 一键验证。
+本插件自带质检：每次使用后可跑 `python3 smoke_test.py` 一键验证（本次实测 56 项全部通过）。
 
 发现 bug 或有改进建议，以 `[QC] <一句话问题>` 为标题提交到 https://github.com/lhg-plugs/lhg-meal-plan/issues，正文写清"复现步骤 → 实际表现 → 期望表现"。
 
